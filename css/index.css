@@ -1,0 +1,142 @@
+@charset "utf-8"
+
+body {
+	color:#666;
+	font-size:12px;
+}
+a{
+	color:#666;
+	
+}
+
+/* S：顶部区域 */
+.h-header {
+	
+}
+
+.h-header .top-nav {
+	margin: 0 auto;
+	width: 1190px;
+	height:74px;
+	padding-top:24px;
+	border: 1px solid #eee;
+}
+
+.h-header .site-nav-wrap {
+	margin:0 auto;
+	height:60px;
+	width: 1190px;
+	border:1px solid #eee;
+}
+
+.h-header .top-nav .logo {
+	position:relative;
+	float: left;
+	left:60px;
+	top:-5px;
+	//border: 1px solid #f00;
+	
+}
+
+.h-header .top-nav .logo img{
+	width:234px;
+}
+
+.top-nav .logo h1 {
+	position: absolute;
+	text-indent:-999999px;
+}
+
+/*
+.h-header .top-nav .scope {
+	//float: left;
+	padding-top:5px;
+	text-indent:-20px;
+}
+*/
+
+.h-header .top-nav .user-nav {
+	background-color:#9f9;
+	float: right;
+	border:1px solid blue;
+}
+
+/*搜索文本框*/
+.h-header .top-nav .search {
+	padding-top:10px;
+	//background-color:#fa0;
+	margin: 0px 265px 0px 357px;
+	//border:1px solid red;
+	line-height:30px;
+	position:relative;
+}
+.h-header .search  .lecture{
+	position:relative;
+	display: inline-block;
+	width:66px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	border:1px solid #e0e0e0;
+}
+
+
+.h-header .search input{
+	display: inline-block;
+	width:400px;
+	height:30px;
+	line-height:30px;
+	padding-left:1em;
+	border:1px solid #e0e0e0;
+}
+.search .lecture, .search input {
+	float:left;
+}
+
+/*下拉三角形*/
+.h-header .search .icon-sel {
+	float:right;
+	margin:13px 5px; /*上右下左*/
+}
+
+/*设置弹出的课程选择层*/
+.h-header .search .course-menu {
+	position:absolute; /*基于父容器定位*/
+	top: 30px;
+	left: -1px;
+	display:none;
+}
+
+.h-header .search .course-menu li {
+	border:1px solid #e0e0e0;
+	width:66px;
+}
+.h-header .search .course-menu li:hover {
+	background-color:#ddd;
+}
+
+/*当鼠标移动到课程上时候，弹出选择*/
+.h-header .lecture:hover .course-menu {
+	display: block;
+}
+
+/*设置放大镜的样式*/
+.h-header .search .icon {
+	/*
+	position:absolute;
+	left:458px;
+	top:17px;
+	*/
+	position:relative; /* 相对于正常位置的定位*/
+	left:-20px;
+	top:6px;
+	
+	display:inline-block;
+	width:30px;
+	height:30px;
+	background: url(../images/search.png) no-repeat;
+}
+
+
+/* E：顶部区域 */
+
