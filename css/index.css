@@ -1,5 +1,10 @@
 @charset "utf-8"
 
+/*
+block中设置文本对齐： text-align
+注意：margin border padding 的使用。
+*/
+
 body {
 	color:#666;
 	font-size:12px;
@@ -19,15 +24,10 @@ a{
 	width: 1190px;
 	height:74px;
 	padding-top:24px;
-	border: 1px solid #eee;
+	/*border: 1px solid #eee;*/
 }
 
-.h-header .site-nav-wrap {
-	margin:0 auto;
-	height:60px;
-	width: 1190px;
-	border:1px solid #eee;
-}
+
 
 .h-header .top-nav .logo {
 	position:relative;
@@ -56,9 +56,9 @@ a{
 */
 
 .h-header .top-nav .user-nav {
-	background-color:#9f9;
+	//background-color:#9f9;
 	float: right;
-	border:1px solid blue;
+	//border:1px solid blue;
 }
 
 /*搜索文本框*/
@@ -76,7 +76,7 @@ a{
 	width:66px;
 	height:30px;
 	line-height:30px;
-	text-align:center;
+	text-align:center; /*设置文本对齐*/
 	border:1px solid #e0e0e0;
 }
 
@@ -105,6 +105,7 @@ a{
 	top: 30px;
 	left: -1px;
 	display:none;
+	background-color:#fff;
 }
 
 .h-header .search .course-menu li {
@@ -112,7 +113,7 @@ a{
 	width:66px;
 }
 .h-header .search .course-menu li:hover {
-	background-color:#ddd;
+	background-color:#eee;
 }
 
 /*当鼠标移动到课程上时候，弹出选择*/
@@ -127,16 +128,260 @@ a{
 	left:458px;
 	top:17px;
 	*/
-	position:relative; /* 相对于正常位置的定位*/
-	left:-20px;
-	top:6px;
+	position:absolute; /* 相对于正常位置的定位*/
+	right:80px;
+	top:18px;
 	
 	display:inline-block;
 	width:30px;
 	height:30px;
-	background: url(../images/search.png) no-repeat;
+	background: url("../images/search.png") no-repeat;
+}
+
+/*搜索框区域*/
+.h-header .top-nav .user-nav {
+	padding-top:5px;
+}
+.h-header .user-nav  .user-nav-item { /*> 代表之作用与儿子，而不作用于孙子*/
+	float:left;
+	height:42px;
+	line-height:42px;
+	margin:0 11px 0 14px;
+}
+.h-header .user-nav .avatar {
+	position:absolute;
+	
+	width:42px;
+	height:42px;
+}
+.h-header .user-nav .username {
+	display: inline-block; /*若不设置这个，张三 就会不在一行，跑到下一行了*/
+	position:relative;
+	right:0px;
+	padding-right:0px;
+	
+}
+
+.h-header .user-nav .user {
+	position:relative;
+	
+}
+
+/*设置弹出用户菜单*/
+.h-header .user-nav .user-menu {
+	position:absolute;
+	left: 0;
+	top:40px;
+	margin-top:2px;
+	display:none;
+	background-color:#fff;
+}
+
+.user-nav .user:hover .user-menu {
+	display:block; /*当鼠标放到user上时 显示下拉菜单*/
+}
+
+.user-nav .user-menu li {
+	display:block;
+	border:1px solid #f1f1f1;
+	width:100px;
+	height:40px;
+	text-align:center ;
+	
+}
+.user-nav .user-menu li:hover {
+	background-color:#eee;
 }
 
 
+/*张三*/
+.zs {
+	padding-left:55px;
+}
+
+/*设置消息li*/
+.h-header .user-nav .msg-wrap {
+	position:relative; 
+	left:-10px;
+	top:5px;
+	display:inline-block; /*inline-block: 可以设置宽高*/
+	width:42px;
+	height:42px;
+	background: url("../images/msg.jpg") no-repeat;
+}
+
+.h-header .user-nav .msg {
+	position:relative; 
+	left:30px;
+	top:-18px;
+	display:inline-block;
+	width:22px;
+	height:22px;
+	line-height:16px;
+	padding-left:3px;
+	background: url("../images/red.png") no-repeat;
+}
+
+.h-header .user-nav .msg-num {
+	color:#fff;
+	
+}
+.h-header .user-nav i.icon {
+	display:inline-block;
+	float:right; 
+	margin:17px 0 0 7px;
+}
+
+
+
+/*用户导航区域*/
+
 /* E：顶部区域 */
+
+/* ============S: 主导航区域=============*/
+/*通栏盒子设置背景色*/
+.site-nav {
+	background-color:#3598db;
+	font-size:16px;
+}
+
+/*设置背景右侧的红色div*/
+.site-nav .bg-red-wrap {  /*父盒子*/
+	margin-left:1190px;
+	position:relative;
+}
+.site-nav .bg-red-wrap .bg-red {  /*子盒子*/
+	position:absolute;
+	right:0;
+	top:0;
+	width: 50%;
+	background-color:#e7594d;
+	height:60px;
+	
+}
+
+/*版心盒子*/
+.h-header .site-nav .site-nav-wrap {
+	margin:0 auto;
+	height:60px;
+	width: 1190px;
+	/*border:1px solid #eee;*/
+}
+.site-nav li, .site-nav a {
+	
+	color: #fff;
+}
+/*左侧主导航*/
+.site-nav .main-nav {
+	float:left;
+	height:60px;
+	line-height:60px;
+}
+.site-nav .main-nav .menu-item {
+	float:left;
+	margin-right:10px;
+}
+
+
+.site-nav .menu-item a {
+	display:inline-block;
+	height:32px;
+	line-height:32px;
+	padding: 0 22px;
+	border-radius:20px;
+}
+.site-nav .menu-item a.cur {
+	background: #2db0f9;
+}
+.site-nav .menu-item a:hover {
+	
+	background: #2db0f9;
+}
+
+/*右侧主导航*/
+.site-nav .aside-nav {
+	float:right;
+	padding-left:20px;
+	background-color:#e7594d;
+}
+
+
+.site-nav .aside-nav li {
+	float:left;
+	line-height:60px;
+	height:60px;
+	margin-left:20px;
+}
+
+/*
+/*右侧主导航
+.site-nav .aside-nav {
+	float:right;
+	height:60px;
+	line-height:60px;
+	background:#f70;
+}
+
+.aside-nav .aside-nav-list a{
+	display:inline-block;
+	height:32px;
+	line-height:32px;
+	padding: 0 22px;
+	border-radius:20px;
+}
+
+.aside-nav .aside-nav-list a:hover {
+	background:#f90;
+}
+*/
+
+
+/* ============E: 主导航区域=============*/
+
+/*=============S: banner ===============*/
+.h-banner {
+	overflow:hidden;
+	width:100%;
+	position:relative;
+}
+.h-banner .banner-img{
+	width:100%;
+	height:404px;
+}
+
+.h-banner .slide-bar {
+	position:absolute;
+	left:50%;
+	margin-left:-45px;
+	z-index:100;
+	top:376px;
+	width:90px;
+	height:14px;
+	background-color:#00f;
+}
+
+
+
+
+/*=============E: banner ===============*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -3,6 +3,7 @@
 所有页面的根样式，common.css or base.css
 */
 
+
 /* 做倒三角 */
 .triangle-down {
 	border:5px solid #666;
@@ -10,6 +11,41 @@
 	border-color: #666 transparent transparent;
 	width:0px;
 	height:0px;
+}
+
+/*单三角*/
+.triangle-up-s {
+	position:relative;
+}
+
+.triangle-up-s:before, .triangle-up-s:after {
+	content:""; /*一定要给content，否则不显示*/
+	border:5px solid #f1f1f1;
+	border-style:dashed dashed solid;
+	border-color: transparent transparent #f1f1f1;
+	width:0px;
+	height:0px;
+	position:absolute;
+	left:90%;
+	top:-10px;
+	
+}  
+
+.triangle-up-s:after {
+	border-color:transparent transparent #fff;
+	top:-7px;
+}
+
+
+.clearfix:before, .clearfix:after {
+	content:" ";
+	display: table;
+}
+.clearfix:after {
+	clear:both;
+	height:0;
+	line-height:0;
+	visibility:hidden;
 }
 
 
