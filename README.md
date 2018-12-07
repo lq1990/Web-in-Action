@@ -1,5 +1,5 @@
 # Web-in-Action
-static Web
+## Static Web
 
 Conclusion:
 
